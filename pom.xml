@@ -11,6 +11,9 @@
   <modules>
     <module>Client</module>
       <module>Spam</module>
+    <module>eureka-server</module>
+    <module>Agents</module>
+    <module>Notification</module>
   </modules>
 
   <name>my-app</name>
@@ -23,6 +26,7 @@
     <maven.compiler.target>1.7</maven.compiler.target>
     <spring.boot.maven.plugin.version>2.7.1</spring.boot.maven.plugin.version>
     <spring.boot.dependencies.version>2.7.1</spring.boot.dependencies.version>
+    <spring.cloud-version>2021.0.2</spring.cloud-version>
   </properties>
 
   <dependencyManagement>
@@ -34,6 +38,13 @@
         <scope>import</scope>
         <type>pom</type>
       </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring.cloud-version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -41,6 +52,10 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
     </dependency>
   </dependencies>
 
