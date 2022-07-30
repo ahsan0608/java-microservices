@@ -1,4 +1,4 @@
-package com.ahsan.notification;
+package com.ahsan.agents.notification;
 
 public record NotificationRequest(
         Integer toClientId,

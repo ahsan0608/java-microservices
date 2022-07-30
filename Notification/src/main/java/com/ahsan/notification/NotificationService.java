@@ -1,5 +1,6 @@
 package com.ahsan.notification;
 
+import com.ahsan.agents.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -11,20 +11,20 @@ public class ClientService {
     private final ClientRepository clientRepository;
     private final SpamAgent spamAgent;
 
-    public void registerClient(ClientRegistrationRequest request){
+
+    public void registerClient(ClientRegistrationRequest request) {
         Client client = Client.builder()
                 .firstName(request.firstName())
                 .lastName(request.lastName())
                 .email(request.email())
                 .build();
 
-        this.clientRepository.save(client);
+        clientRepository.saveAndFlush(client);
 
-        SpamCheckResponse spamCheckResponse = this.spamAgent.isSpammer(client.getId());
-
+        SpamCheckResponse spamCheckResponse = spamAgent.isSpammer(client.getId());
 
         if (!spamCheckResponse.isSpammer()){
-            throw new IllegalStateException("Spammer");
+            throw new IllegalStateException("Spammer!");
         }
 
 

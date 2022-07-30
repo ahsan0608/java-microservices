@@ -14,6 +14,7 @@
     <module>eureka-server</module>
     <module>Agents</module>
     <module>Notification</module>
+      <module>api-gw</module>
   </modules>
 
   <name>my-app</name>
