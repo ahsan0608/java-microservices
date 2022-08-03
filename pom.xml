@@ -15,6 +15,7 @@
     <module>Agents</module>
     <module>Notification</module>
       <module>api-gw</module>
+      <module>rmq</module>
   </modules>
 
   <name>my-app</name>

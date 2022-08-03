@@ -15,7 +15,7 @@ public class SpamCheckService {
         spamCheckHistoryRepository.save(
                 SpamCheckHistory.builder()
                         .clientId(clientId)
-                        .isSpammer(false)
+                        .isSpammer(true)
                         .createdAt(LocalDateTime.now())
                         .build()
         );
